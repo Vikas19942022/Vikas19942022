@@ -54,7 +54,7 @@ guest@Vikas19942022:~$ neofetch
      API Testing .... Postman, REST Assured (flow)
      Perf Testing ... Apache JMeter
      Database ....... SQL
-     Frameworks ..... TestNG / Cucumber / BDD
+     Frameworks ..... TestNG
      ─────────────────────────────────────────
      Status ......... [ONLINE] :: building CI/CD test suites
      Focus .......... Test Automation Architecture
