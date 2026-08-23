@@ -1,7 +1,6 @@
 <div align="center">
 
-<img src="https://cdn.jsdelivr.net/gh/Vikas19942022/Vikas19942022@main/assets/banner.svg" width="100%" alt="banner" />
-
+<img src="https://raw.githubusercontent.com/Vikas19942022/Vikas19942022/main/banner.svg" width="100%" alt="banner" />
 <br/>
 
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=2800&pause=900&color=39FF14&center=true&vCenter=true&width=680&lines=root%40Vikas19942022%3A~%24+whoami;SDET+%7C+QA+Automation+Engineer;Java+%7C+Selenium+%7C+Playwright;Building+bug-free+pipelines+one+test+at+a+time..." alt="Typing SVG" />
