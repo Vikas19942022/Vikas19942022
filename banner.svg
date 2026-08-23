@@ -1,0 +1,80 @@
+<svg viewBox="0 0 1000 220" xmlns="http://www.w3.org/2000/svg" font-family="'Fira Code','Consolas',monospace">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0d1117"/>
+      <stop offset="100%" stop-color="#010409"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#39FF14" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#39FF14" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#39FF14" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2.2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <clipPath id="rounded">
+      <rect x="0" y="0" width="1000" height="220" rx="14"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#rounded)">
+    <rect x="0" y="0" width="1000" height="220" fill="url(#bg)"/>
+
+    <!-- faint scanlines -->
+    <g opacity="0.06">
+      <rect x="0" y="0" width="1000" height="220" fill="url(#scan)"/>
+    </g>
+    <pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse">
+      <rect width="4" height="2" fill="#39FF14"/>
+    </pattern>
+
+    <!-- moving accent line -->
+    <rect x="-1000" y="0" width="1000" height="2" fill="url(#glow)">
+      <animate attributeName="x" from="-1000" to="1000" dur="6s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- title bar -->
+    <rect x="0" y="0" width="1000" height="34" fill="#161b22"/>
+    <circle cx="20" cy="17" r="6" fill="#ff5f56"/>
+    <circle cx="42" cy="17" r="6" fill="#ffbd2e"/>
+    <circle cx="64" cy="17" r="6" fill="#27c93f"/>
+    <text x="500" y="22" fill="#8b949e" font-size="13" text-anchor="middle">vikas19942022@github — zsh — 100x24</text>
+
+    <!-- prompt line 1 -->
+    <text x="30" y="80" font-size="22" fill="#58a6ff">
+      guest<tspan fill="#8b949e">@</tspan>Vikas19942022<tspan fill="#8b949e">:~$</tspan>
+    </text>
+
+    <!-- typed command -->
+    <text x="30" y="115" font-size="26" fill="#39FF14" filter="url(#softGlow)">
+      <tspan>./run_tests.sh --suite=full</tspan>
+    </text>
+
+    <!-- output lines fading in sequentially -->
+    <g font-size="18" fill="#c9d1d9">
+      <text x="30" y="150" opacity="0">
+        [PASS] Selenium :: UI regression suite
+        <animate attributeName="opacity" values="0;1" begin="0.6s" dur="0.4s" fill="freeze"/>
+      </text>
+      <text x="30" y="175" opacity="0">
+        [PASS] Playwright :: cross-browser E2E
+        <animate attributeName="opacity" values="0;1" begin="1.3s" dur="0.4s" fill="freeze"/>
+      </text>
+      <text x="30" y="200" opacity="0">
+        [PASS] JMeter + Postman :: performance &amp; API checks — build stable ✔
+        <animate attributeName="opacity" values="0;1" begin="2.0s" dur="0.4s" fill="freeze"/>
+      </text>
+    </g>
+
+    <!-- blinking cursor -->
+    <rect x="700" y="97" width="12" height="24" fill="#39FF14">
+      <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.5;0.51;1" dur="1s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <rect x="0.5" y="0.5" width="999" height="219" rx="14" fill="none" stroke="#30363d" stroke-width="1"/>
+</svg>
