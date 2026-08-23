@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./assets/banner.svg" width="100%" alt="banner" />
+<img src="https://cdn.jsdelivr.net/gh/Vikas19942022/Vikas19942022@main/assets/banner.svg" width="100%" alt="banner" />
 
 <br/>
 
