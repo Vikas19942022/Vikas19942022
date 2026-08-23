@@ -52,7 +52,6 @@ guest@Vikas19942022:~$ neofetch
      Languages ...... Java
      UI Testing ..... Selenium WebDriver, Playwright
      API Testing .... Postman, REST Assured (flow)
-     Perf Testing ... Apache JMeter
      Database ....... SQL
      Frameworks ..... TestNG
      ─────────────────────────────────────────
